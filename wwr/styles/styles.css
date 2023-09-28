@@ -2,6 +2,7 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+
 body{
     background-color: #fff;
 }
@@ -14,14 +15,6 @@ header{
     width: 80px;
 }
 
-.icon{
-    width: 80px;
-}
-
-#hero-img{
-    width: 100%;
-    margin: 0 auto;
-}
 nav a{
     text-align: center;
     text-decoration: none;
@@ -34,13 +27,28 @@ nav a:hover{
     color: #fe7f2d;
 
 }
-.button-box a{
-    color: white
+
+#hero-img{
+    width: 100%;
+    margin: 0 auto;
 }
 
 #hero-msg h1{
     text-align: center;
 }
+
+.button-box a{
+    color: white
+}
+
+
+.icon{
+    width: 80px;
+}
+
+
+
+
 
 .book, .join{
     background-color: #619b8a;
@@ -83,7 +91,6 @@ main section{
     color: white;
     background-color: #619b8a;
 }
-
 
 
 
