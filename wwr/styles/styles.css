@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display:ital,wght@1,500&display=swap');
+
 #content{
     max-width: 1600px;
     margin: 0 auto;
+    font-family: 'Oswald','Helvetica','sans-serif';
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+
 }
 
 body{
@@ -8,17 +15,22 @@ body{
 }
 
 header{
-    background-color: rgba(20,30,13, .7);
+    background-color: #124948;
 }
 
 .logo{
     width: 80px;
 }
 
+#logo-link{
+    padding-top: 5px;
+}
+
 nav a{
     text-align: center;
     text-decoration: none;
     color: #fff;
+    padding: 35px;
     
 }
 
@@ -44,9 +56,12 @@ nav a:hover{
 
 .icon{
     width: 80px;
+    padding-top: 10px;
 }
 
-
+h2{
+    margin: 0;
+}
 
 
 
@@ -54,6 +69,12 @@ nav a:hover{
     background-color: #619b8a;
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+
+
 }
 
 .book:hover, .join:hover{
@@ -70,6 +91,9 @@ nav a:hover{
 
 .home-title{
     color: black;
+    font-family: "Playfair Display",'Oswald', 'Helvetica', 'sans-serif';
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 
@@ -81,21 +105,44 @@ main section{
     text-align: center;
 }
 
+main section img{
+    box-sizing: border-box;
+}
+
 #background{
     height: 725px;
     background-color: #619b8a;
 }
 
+.card-img{
+    border: 10px solid #124948;
+}
+
+.rivers-card, .camping-card, .rapids-card{
+    margin: 200px 0;
+}
 
 .msg{
     color: white;
-    background-color: #619b8a;
+    background-color: #124948 ;
+    line-height: 1.5em;
+    padding: 35px;
+}
+
+.msg h2{
+    font-family: "Playfair Display",'Oswald', 'Helvetica';
+}
+
+.msg p{
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 
 
-
 footer{
-    background-color: #619b8a;
+    background-color: #124948;
+    padding: 15px 50px;
+    margin-top: 200px;
 }
 
 footer a{
@@ -114,4 +161,8 @@ footer p{
 
 footer p a:hover{
     text-decoration: underline;
+}
+
+footer .social img{
+    padding-top: 15px;
 }
