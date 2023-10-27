@@ -9,21 +9,23 @@ Fonts are separated by a | */
   --secondary-color: #191825 ;
   --accent1-color: #8C8C8D;
   --accent2-color: #0B121C;
+  
+
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Philosopher & Family";
   --paragraph-font: Newsreader, Baskervville , Sofia Sans Condensed;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
+  --headline-color-on-white: #191825;  /* headlines on a white background */ 
   --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
+  --paragraph-color-on-white: #191825; /* paragraph text on a white background */ 
   --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #396E94  ;
-  --nav-link-color: #396E94;
-  --nav-background-color: #D4AC0D;
+  --paragraph-background-color: #0B121C;
+  --nav-link-color: #ffff;
+  --nav-background-color: #191825;
   --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
+  --nav-hover-background-color: #8C8C8D;
 }
 
 
