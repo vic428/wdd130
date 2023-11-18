@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Newsreader:opsz,wght@6..72,300&family=Philosopher&family=Sofia+Sans+Condensed&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    background-color: #191825;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+}
+header span{
+    color: #EA8A4D;
+}
+
+li, a{
+    font-family:"Philosopher & Family", Newsreader;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+button{
+    font-family:"Philosopher & Family", Newsreader;
+    padding: 9px 25px;
+    background-color: #EA8A4D;
+    color: #edf0f1;
+    border-radius: 40px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-left: 20px;
+}
+button:hover {
+    background-color: #eb3c10;
+}
+
+.btn-2{
+    font-family:"Philosopher & Family", Newsreader;
+    padding: 9px 25px;
+    background-color: #EA8A4D;
+    color: #edf0f1;
+    border-radius: 40px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin: 10px;
+   
+}
+
+.btn-2:hover {
+    background-color: #eb3c10;
+}
+
+#logo{
+    font-family:"Philosopher & Family", Newsreader;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: 16px;
+}
+.nav-link{
+    list-style: none;
+}
+
+.nav-link li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-link li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-link li a:hover{
+    color: #EA8A4D;
+}
+
+/*----------- Main Content Styling------------*/
+#grid-home{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.intro-text{
+    font-family:"Philosopher & Family", Newsreader;
+    padding-top: 150px;
+    margin-left: 80px;
+    grid-column: 1/5;
+    grid-row: 1/4;
+    
+}
+.intro-text p {
+    display:flex;
+    justify-self: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 50;
+    line-height: 21px;
+}
+
+
+.intro-carousel{
+    grid-column: 6/11;
+    grid-row: 1/4;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    
+}
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+    
+}
+
+.wrapper i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #EA8A4D;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+
+}
+
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+}
+/*.wrapper i:hover{
+    background: #f2f2f2;
+}*/
+.wrapper i:first-child{
+    left: -22px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 525px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 25px;
+    /*width: calc(100% / 3);*/
+    width: 590px;
+    border-radius: 50px;
+}
+.carousel img:first-child{
+    margin-left: 0px;
+}
+  
+/*------------ Services section ----------------*/
+.services h2{
+    margin-top: 100px;
+    font-family: "Philosopher & Family", Newsreader;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+  
+
+
+
+
+
+
+footer{
+    background-color: #191825;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+@media screen and (max-width: 900px) {
+    .carousel img{
+      width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 550px) {
+    .carousel img{
+      width: 100%;
+    }
+}
