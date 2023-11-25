@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Newsreader:opsz,wght@6..72,300&family=Philosopher&family=Sofia+Sans+Condensed&display=swap');
 
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+   
 }
 
 .main{
@@ -87,10 +88,28 @@ button:hover {
 }
 
 /*----------- Main Content Styling------------*/
+#home {
+    font-family:"Philosopher & Family", Newsreader;
+    margin: auto;
+    background: #f1f1f1;
+    height: 50%;
+}
+#home .container{
+    width: 1200px;
+    display: grid;
+    padding-top: -10px;
+    padding-bottom: 50px;
+    margin-bottom: -45px;
+}
+
+
 #grid-home{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
+
+
+
 .intro-text{
     font-family:"Philosopher & Family", Newsreader;
     padding-top: 150px;
@@ -109,105 +128,474 @@ button:hover {
 }
 
 
-.intro-carousel{
-    grid-column: 6/11;
+.grid-2{
+    grid-column: 5/10;
     grid-row: 1/4;
     margin-left: 10px;
-    margin-right: 10px;
     padding-top: 10px;
     
+    
+}
+.carousel-wrapper {
+    height: 500px;
+    position: relative;
+    width: 700px;
+    display: block;
+    margin: 50px auto ;
+    
+    
+}
+  
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    border-radius: 30px;
+}
+.arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  
+}
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+  
+[id^= "item"] {
+    display: none;
+}
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('/melistandard/images/Food Menu 1.jpg');
+    background-size: cover;
+}
+.item-2 {
+    background: url('/melistandard/images/Image 1.jpeg');
+    background-size: cover;
+}
+.item-3 {
+    background: url('/melistandard/images/Food Menu 4.jpg');
+    background-size: cover;
+}
+  
+*:target ~ .item-1{
+    opacity: 0;
+}
+  #item-1:target ~ .item-1 {
+    opacity: 1;
+  
+}
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+} 
+
+
+/*------------ Services section ----------------*/
+.services {
+    font-family:"Philosopher & Family", Newsreader;
+    margin: 40px auto;
+    overflow: hidden;
+    background: #f1f1f1;
+    min-height: 50vh;
+}
+
+.services h3{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5px;
+    margin-bottom: -45px;
+    position: relative;
+    font-size: 27px;
+    
+}
+
+.services h3:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    left: 510px;
+    top: 50%;
+    position: absolute;
+}
+.services h3:after{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    right: 510px;
+    top: 50%;
+    position: absolute;
+}
+
+
+
+
+.services .container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: -45px;
+}
+
+.box{
+    width: 550px;
+    height: 200px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 8px 8px 16px #d1d1d1,
+                -8px -8px 16px #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+.box:hover{
+    background: linear-gradient(145deg, #EA8A4D, #e6e6e6);
+    box-shadow: 8px 8px 16px #d1d1d1,
+                -8px -8px 16px #ffffff;
+}     
+.box i{
+    font-size: 30px;
+    color: #EA8A4D;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.box:hover i{
+    margin-top: 0px;
+    color: #fff;
+
+}
+
+
+
+/*------------ Testimonial section ----------------*/
+section{
+    position: relative;
+    min-height: 45vh;
+    width: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+    font-family: "Philosopher & Family", Newsreader;
+    
+}
+
+/*section:before{
+    position: absolute;
+    content: '';
+    width: 2000px;
+    height: 100%;
+    bottom: -70%;
+    border-radius: 50%;
+    background: #EA8A4D;
+}
+*/
+section .heading{
+    display: inline-block;
+    position: relative;
+    font-family: "Philosopher & Family", Newsreader;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+section .heading h2:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    left: 500px;
+    top: 50%;
+    position: absolute;
+}
+section .heading h2:after{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    right: 500px;
+    top: 50%;
+    position: absolute;
+}
+section p{
+    text-align: center;
+    margin: 10px;
+    font-weight: 500px;
+    font-size: 20px;
 }
 .wrapper{
+    width: 100%;
     display: flex;
-    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.wrapper .container{
+    position: relative;
+    width: 290px;
+    height: 450px;
+    color: #fff;
+    background: #0B121C;
+    margin: 10px 30px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.wrapper .container .profile .imgbox{
+    position: relative;
+    height: 150px;
+    width: 210px;
+    border: 1px solid #0B121C;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.wrapper .container .profile .imgbox img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.wrapper .container .profile .imgbox img{
+    filter: saturate(140%);
+    transform: scale(0.95);
+    
+}
+
+.wrapper .container .profile p{
+    padding: 0 9px;
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.8;
+    text-align: center;
+}
+.wrapper .container h2{
+    margin-top: 13px;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 14px;
+}
+.wrapper .container p{
+    margin-top: -4px;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*------------ Clients section ----------------*/
+.clients{
+    margin: 40px auto;
+    font-family:"Philosopher & Family", Newsreader;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.clients h2{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
     position: relative;
     
 }
-
-.wrapper i{
+.clients h2:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    left: 550px;
     top: 50%;
-    height: 44px;
-    width: 44px;
-    color: #343F4F;
-    cursor: pointer;
-    font-size: 1.15rem;
     position: absolute;
-    text-align: center;
-    line-height: 44px;
-    background: #EA8A4D;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
+}
+.clients h2:after{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #eb3c10;
+    right: 550px;
+    top: 50%;
+    position: absolute;
 }
 
-.wrapper i:active{
-    transform: translateY(-50%) scale(0.9);
-
-}
-
-.wrapper i:active{
-    transform: translateY(-50%) scale(0.9);
-}
-/*.wrapper i:hover{
-    background: #f2f2f2;
-}*/
-.wrapper i:first-child{
-    left: -22px;
-    display: none;
-}
-.wrapper i:last-child{
-    right: -22px;
-}
-.wrapper .carousel{
-    font-size: 0px;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-}
-.carousel.dragging{
-    cursor: grab;
-    scroll-behavior: auto;
-}
-.carousel.dragging img{
-    pointer-events: none;
-}
-.carousel img{
-    height: 525px;
-    object-fit: cover;
-    user-select: none;
-    margin-left: 25px;
-    /*width: calc(100% / 3);*/
-    width: 590px;
-    border-radius: 50px;
-}
-.carousel img:first-child{
-    margin-left: 0px;
-}
-  
-/*------------ Services section ----------------*/
-.services h2{
-    margin-top: 100px;
-    font-family: "Philosopher & Family", Newsreader;
+.clients .wrapper{
+    width: 1200px;
+    margin: auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.slide-track {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    animation: carousel-animation 35s infinite; 
+    
+}
+  
+.slide {
+    display: inline-block;
+    width: 100px; /* Set your desired width */
+    margin: 0 10px; /* Adjust margins as needed */
+    text-align: center;
+    padding: 20px;
+    
+}
+  
+.slide img {
+    max-width: 100%;
+    height: auto;
 }
 
-  
+.slide h3{
+    text-align: center;
+}  
 
+@keyframes carousel-animation {
+    0% {
+      transform: translateX(300%); /* Start position from the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End position to the left */
+    }
+}
 
-
-
-
+/*-----------------footer section ----------------------*/
 
 footer{
-    background-color: #191825;  
+    background-color: #191825; 
+    line-height: 1.5; 
+    
+}
+.container{
+    max-width: 1170px;
+    margin:auto;
+    
+}
+
+.row{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px 10%;
+    flex-wrap: wrap;
+    margin-left: 35px;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    
+    padding: 50px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h3{
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:#eb3c10;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li a{
+    font-size: 14px;
+    text-transform:capitalize;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #bbbbbb;
+    background-color: #eb3c10;
+
+}
+
+/* General styles applicable to all screen sizes */
+/* ... */
+
+
+
+/* responsive query for the footer */
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 900px) {
